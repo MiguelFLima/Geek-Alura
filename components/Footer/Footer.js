@@ -16,7 +16,7 @@ function Footer() {
       </div>
 
         <div className=''>
-            <p className='text-black  text-lg font-bold shadow-[0px_1px_1px_gray] mt-[10px] md:mt-[30px]'>Fale conosco</p>
+            <p className='text-black  text-lg font-bold shadow-[0px_1px_1px_gray] mt-[30px] md:mt-[30px]'>Fale conosco</p>
             <input className='w-[340px] rounded-md h-[56px] flex justify-center pl-3 items-center shadow-2xl mt-[10px] md:mt-[30px]' placeholder='Nome'/>
             <input className='w-[340px] rounded-md h-[82px] flex md:mt-[30px] justify-center pl-3 items-center shadow-2xl mt-[10px] place' placeholder='Escreva sua mensagem'/>
             <button className='bg-[#2a7ae4] flex justify-center items-center w-[151px] rounded-md h-[40px] mt-[10px] md:mt-[30px] text-white'>Enviar Mensagem</button>
