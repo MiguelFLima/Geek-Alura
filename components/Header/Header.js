@@ -38,7 +38,7 @@ function Header(props) {
 
       {props.isInTheLoginPageOrLogged ? (
         ''
-      ) : (<Link href="./Login">
+      ) : (<Link href="/Login">
       <a>
         <button className="w-[133px] h-[40px] text-[#2A7AE4] py-3 px-4 border border-solid hover:bg-cyan-900 hover:text-white transition ease-in-out delay-130 border-[#2a7ae4] font-semibold text-sm flex items-center justify-center">
           Login
