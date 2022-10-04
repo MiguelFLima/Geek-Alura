@@ -7,9 +7,9 @@ import starwars from "../../Dados/starwars";
 function ListaProdutos() {
   return (
     <div className="xl:h-[942px] xl:w-[100%] flex justify-center items-center xl:mt-[90px] xl:flex-row flex-col">
-      <div className="xl:w-[80%] w-[70%] md:w-[70%]">
+      <div className="xl:w-[80%] w-[70%] md:w-[80%]">
         <div className="flex justify-between items-center mt-4 flex-col xl:flex-row md:flex-row w-[100%] mb-6 xl:mb-[50px] xl:mt-[50px] md:mb-[60px] md:mt-[30px]">
-          <h1 className="font-bold text-lg mb-4">Todos os Produtos</h1>
+          <h1 className="font-bold xl:text-[32px] text-[20px] md:text-[24px] mb-4">Todos os Produtos</h1>
           <button className="bg-blue-700 text-white p-2 mb-2 text-sm flex justify-center items-center xl:w-[164px] md:p-2 xl:h-[40px] xl:p-4">
             Adicionar Produto
           </button>
