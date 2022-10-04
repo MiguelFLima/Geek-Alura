@@ -3,7 +3,7 @@ import React from "react";
 import { Search2Icon } from "@chakra-ui/icons";
 import Link from "next/link";
 
-function Header() {
+function Header(props) {
   return (
     <div className="w-full h-[72px] flex items-center justify-around gap-3">
       <div className="w-[133px] h-[40px] xl:w-[176px] xl:h-[50px] py-3 px-4 flex items-center justify-center">
@@ -35,13 +35,17 @@ function Header() {
           />
         </div>
       </div>
-      <Link href="./Login">
-        <a>
-          <button className="w-[133px] h-[40px] text-[#2A7AE4] py-3 px-4 border border-solid hover:bg-cyan-900 hover:text-white transition ease-in-out delay-130 border-[#2a7ae4] font-semibold text-sm flex items-center justify-center">
-            Login
-          </button>
-        </a>
-      </Link>
+
+      {props.isInTheLoginPageOrLogged ? (
+        ''
+      ) : (<Link href="./Login">
+      <a>
+        <button className="w-[133px] h-[40px] text-[#2A7AE4] py-3 px-4 border border-solid hover:bg-cyan-900 hover:text-white transition ease-in-out delay-130 border-[#2a7ae4] font-semibold text-sm flex items-center justify-center">
+          Login
+        </button>
+      </a>
+    </Link>) }
+
       <div className="md:hidden flex justify-center items-center">
         <Search2Icon height="20px" width="20px" className="mr-[5px]" />
       </div>

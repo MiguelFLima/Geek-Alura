@@ -7,7 +7,7 @@ import FormLogin from '../components/FormLogin/FormLogin';
 function Login() {
   return (
     <>
-        <Header />
+        <Header isInTheLoginPageOrLogged={true} />
         <FormLogin />
         <Footer />
         <Dono />

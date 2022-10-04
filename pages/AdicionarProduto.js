@@ -7,7 +7,7 @@ import FormNovoProduto from '../components/FormProdutoNovo/FormProdutoNovo';
 function AdicionarProduto() {
   return (
     <>
-        <Header />
+        <Header isInTheLoginPageOrLogged={true} />
         <FormNovoProduto />
         <Footer />
         <Dono />

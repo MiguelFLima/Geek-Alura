@@ -15,7 +15,7 @@ export default function Home() {
         <title>E - Geek | Store</title>
       </Head>
 
-      <Header />
+      <Header isInTheLoginPage={false} />
       <Banner />
 
       <SessaoSW />

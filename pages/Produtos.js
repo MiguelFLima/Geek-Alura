@@ -7,7 +7,7 @@ import ListaProdutos from '../components/ListaProdutos/ListaProdutos';
 function Produtos() {
   return (
     <>
-        <Header />
+        <Header isInTheLoginPageOrLogged={true} />
         <ListaProdutos />
         <Footer />
         <Dono />
