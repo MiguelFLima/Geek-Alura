@@ -7,13 +7,17 @@ function Header() {
   return (
     <div className="w-full h-[72px] flex items-center justify-around gap-3">
       <div className="w-[133px] h-[40px] xl:w-[176px] xl:h-[50px] py-3 px-4 flex items-center justify-center">
-        <Image
-          className=""
-          width="120px"
-          height="36px"
-          src="/Logo.png"
-          alt="Logo"
-        ></Image>
+        <Link href='/'>
+          <a>
+            <Image
+              className=""
+              width="120px"
+              height="36px"
+              src="/Logo.png"
+              alt="Logo"
+            ></Image>
+          </a>
+        </Link>
       </div>
       <div className="md:flex justify-between items-center relative hidden xl:ml-[-500px] ">
         <input
