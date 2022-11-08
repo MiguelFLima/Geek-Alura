@@ -1,9 +1,14 @@
 import React from 'react';
 import { ArrowForwardIcon } from '@chakra-ui/icons';
 import Image from 'next/image';
-import starwars from '../../Dados/starwars';
+import { useRecoilValue } from 'recoil';
+import { dadosListState } from '../../atoms/dadosAtom';
 
 function SecaoSW() {
+
+  const dadosAtom = useRecoilValue(dadosListState)
+  const meusDados = dadosAtom.filter((dado) => dado.categoria === 'starwars');
+
   return (
     <div>
       <div className='flex justify-between items-center mt-4 mb-4 xl:ml-24'>
@@ -14,7 +19,7 @@ function SecaoSW() {
       </div>
 
       <div className='flex w-full flex-wrap items-center justify-center gap-10 mb-6'>
-          {starwars.map((produto) => (
+          {meusDados.map((produto) => (
             <div key={produto.id}>
               <div className='xl:w-[176px] xl:h-[174px]'>
                 <Image src={produto.foto} height='170px' width='156px'  alt={`Produto ${produto.id}`} />

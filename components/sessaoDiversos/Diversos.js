@@ -1,9 +1,15 @@
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 import Image from "next/image";
 import React from "react";
-import diversos from "../../Dados/diversos";
+import { useRecoilValue } from 'recoil';
+import { dadosListState } from '../../atoms/dadosAtom';
 
 function SessaoDiversos() {
+
+  const dadosAtom = useRecoilValue(dadosListState)
+  const meusDados = dadosAtom.filter((dado) => dado.categoria === 'diversos');
+
+
   return (
     <div>
       <div className="flex justify-between items-center mt-4 xl:ml-24 mb-4">
@@ -18,7 +24,7 @@ function SessaoDiversos() {
       </div>
 
       <div className="flex w-full flex-wrap items-center justify-center gap-10 mb-6">
-        {diversos.map((produto) => (
+        {meusDados.map((produto) => (
           <div key={produto.id}>
             <div className="xl:w-[176px] xl:h-[174px]">
               <Image

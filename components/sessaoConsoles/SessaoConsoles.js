@@ -1,9 +1,13 @@
 import { ArrowForwardIcon } from '@chakra-ui/icons';
 import Image from 'next/image';
 import React from 'react';
-import consoles from '../../Dados/consoles';
+import { useRecoilValue } from 'recoil';
+import { dadosListState } from '../../atoms/dadosAtom';
 
 function SessaoConsoles() {
+
+  const dadosAtom = useRecoilValue(dadosListState)
+  const meusDados = dadosAtom.filter((dado) => dado.categoria === 'consoles');
 
     return (
       <div>
@@ -15,7 +19,7 @@ function SessaoConsoles() {
       </div>
 
       <div className='flex w-full flex-wrap items-center justify-center gap-10 mb-6'>
-          {consoles.map((produto) => (
+          {meusDados.map((produto) => (
             <div key={produto.id}>
               <div className='xl:w-[176px] xl:h-[174px]'>
                 <Image src={produto.foto} height='170px' width='156px'  alt={`Produto ${produto.id}`} />

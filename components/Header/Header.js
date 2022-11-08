@@ -1,9 +1,22 @@
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Search2Icon } from "@chakra-ui/icons";
 import Link from "next/link";
+import { useRecoilState, useRecoilValue } from 'recoil';
+import { dadosListState } from '../../atoms/dadosAtom';
 
 function Header(props) {
+  const [search, setSearch] = useState('')
+  const [dados, setDados] = useRecoilState(dadosListState);
+
+  const handleSearchChange = (e) => {
+    setSearch(e.target.value)
+  }
+
+  useEffect(() => {
+    setDados(dados.filter((dado) => dado.nome.toLowerCase().includes(search)))
+  }, [search])
+
   return (
     <div className="w-full h-[72px] flex items-center justify-around gap-3">
       <div className="w-[133px] h-[40px] xl:w-[176px] xl:h-[50px] py-3 px-4 flex items-center justify-center">
@@ -15,15 +28,17 @@ function Header(props) {
               height="36px"
               src="/Logo.png"
               alt="Logo"
-            ></Image>
+            />
           </a>
         </Link>
       </div>
-      <div className="md:flex justify-between items-center relative hidden xl:ml-[-500px] ">
+      <div className="md:flex justify-between items-center relative hidden xl:ml-[-400px] ">
         <input
           type="text"
           className="border placeholder:text-sm w-[300px]  rounded-[24px] px-7 ml-[-80px] bg-gray-100 placeholder:text-gray-400 placeholder:flex placeholder:items-center placeholder:justify-start py-1"
           placeholder="O que deseja encontrar ?"
+          value={search}
+          onChange={handleSearchChange}
         />
         <div className="flex justify-between items-center ml-[-35px]">
           <Image
