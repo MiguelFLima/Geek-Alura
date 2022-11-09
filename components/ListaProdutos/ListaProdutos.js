@@ -29,7 +29,7 @@ function ListaProdutos() {
         <div className='flex w-full flex-wrap items-center md:justify-between xl:justify-between justify-center gap-10 mb-6'>
           {starwarsDados.map((produto) => (
             <div key={produto.id}>
-              <div className='xl:w-[176px] xl:h-[174px]'>
+              <div className='lg:w-[160px] lg:h-[166px]'>
                 <Image src={produto.foto} height='174px' width='176px' alt={`Produto ${produto.id}`} />
               </div>
               <p className='font-bold xl:text-lg'>{produto.nome}</p>
@@ -43,7 +43,7 @@ function ListaProdutos() {
       <div className="flex w-full flex-wrap items-center md:justify-between xl:justify-between justify-center gap-10 mb-6">
           {consoleDados.map((produto) => (
             <div key={produto.id}>
-              <div className="xl:w-[176px] xl:h-[174px]">
+              <div className="lg:w-[160px] lg:h-[166px]">
                 <Image
                   src={produto.foto}
                   height='174px' width='176px'
@@ -62,7 +62,7 @@ function ListaProdutos() {
         <div className='flex w-full flex-wrap items-center md:justify-between xl:justify-between justify-center gap-10 mb-10 xl:mb-[120px]'>
           {diversosDados.map((produto) => (
             <div key={produto.id}>
-              <div className='xl:w-[176px] xl:h-[174px]'>
+              <div className='lg:w-[160px] lg:h-[166px]'>
                 <Image src={produto.foto} height='174px' width='176px'  alt={`Produto ${produto.id}`} />
               </div>
               <p className='font-bold xl:text-lg'>{produto.nome}</p>
