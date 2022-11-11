@@ -20,8 +20,8 @@ function Header({ isInTheLoginPageOrLogged, isLogged = false }) {
   }, [search]);
 
   return (
-    <div className="w-full h-[72px] flex items-center justify-around gap-3">
-      <div className="w-[133px] h-[40px] xl:w-[176px] xl:h-[50px] py-3 px-4 flex items-center justify-center">
+    <div className="w-[80%] mx-auto h-[72px] flex items-center gap-3">
+      <div className="w-[133px] h-[40px] xl:w-[176px] xl:h-[50px] py-3 flex items-center">
         <Link href="/">
           <a>
             <Image
@@ -34,10 +34,10 @@ function Header({ isInTheLoginPageOrLogged, isLogged = false }) {
           </a>
         </Link>
       </div>
-      <div className="md:flex justify-between items-center relative hidden xl:ml-[-400px] ">
+      <div className="md:flex justify-between items-center hidden ">
         <input
           type="text"
-          className="border placeholder:text-sm w-[300px]  rounded-[24px] px-7 ml-[-80px] bg-gray-100 placeholder:text-gray-400 placeholder:flex placeholder:items-center placeholder:justify-start py-1"
+          className="border placeholder:text-sm w-[300px] rounded-[24px] px-7 bg-gray-100 placeholder:text-gray-400 placeholder:flex placeholder:items-center placeholder:justify-start py-1"
           placeholder="O que deseja encontrar ?"
           value={search}
           onChange={handleSearchChange}
@@ -63,17 +63,6 @@ function Header({ isInTheLoginPageOrLogged, isLogged = false }) {
             </button>
           </a>
         </Link>
-      )}
-
-      {isLogged ? (
-        <button
-          onClick={() => router.push("/profile")}
-          className="px-3 py-2 bg-green-600 rounded-lg text-white transition duration-100 active:scale-95 hover:bg-green-700"
-        >
-          Acessar meu perfil
-        </button>
-      ) : (
-        ""
       )}
 
       <div className="md:hidden flex justify-center items-center">

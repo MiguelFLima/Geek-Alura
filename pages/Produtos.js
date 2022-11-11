@@ -3,15 +3,10 @@ import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 import Dono from "../components/Dono/Dono";
 import ListaProdutos from "../components/ListaProdutos/ListaProdutos";
-import { useSession, useSupabaseClient } from "@supabase/auth-helpers-react";
 import { useRouter } from "next/router";
 
 function Produtos() {
-  const session = useSession();
-  const supabase = useSupabaseClient();
   const router = useRouter();
-
-  console.log("session", session);
 
   // Checking if the user is logged
   // useEffect(() => {

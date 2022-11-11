@@ -1,6 +1,18 @@
-import React from "react";
+import { useRouter } from "next/router";
+import React, { useEffect } from "react";
+import { useRecoilValue } from "recoil";
+import { userAtomCredential } from "../../atoms/userAtomCredential";
 
 function FormProdutoNovo() {
+  const router = useRouter();
+  const userCredential = useRecoilValue(userAtomCredential)
+
+  useEffect(() => {
+    if (userCredential === null) {
+      router.push('/')
+    }
+  }, [])
+
   return (
     <div className="w-[100%] xl:h-[750px] h-[550px] justify-center items-center flex flex-col bg-gray-100 ">
       <form className="w-[100%] xl:h-[750px] h-[620px] justify-center items-center flex flex-col bg-gray-100 xl:mb-10 ">
