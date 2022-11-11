@@ -28,3 +28,17 @@ export default function Home() {
     </div>
   )
 }
+
+// export function getServerSideProps() {
+
+//   const RTdatabase = getDatabase(app);
+
+//   console.log("RTdatabase", RTdatabase)
+  
+
+//   return {
+//     props: {
+//       RTdatabase,
+//     }
+//   }
+// }

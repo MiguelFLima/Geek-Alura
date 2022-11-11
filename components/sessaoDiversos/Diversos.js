@@ -7,7 +7,7 @@ import { dadosListState } from '../../atoms/dadosAtom';
 function SessaoDiversos() {
 
   const dadosAtom = useRecoilValue(dadosListState)
-  const meusDados = dadosAtom.filter((dado) => dado.categoria === 'diversos');
+  const meusDados = dadosAtom?.filter((dado) => dado.categoria === 'diversos');
 
 
   return (
@@ -24,7 +24,7 @@ function SessaoDiversos() {
       </div>
 
       <div className="flex w-full flex-wrap items-center justify-center gap-10 mb-6">
-        {meusDados.map((produto) => (
+        {meusDados?.map((produto) => (
           <div key={produto.id}>
             <div className="xl:w-[176px] xl:h-[174px]">
               <Image

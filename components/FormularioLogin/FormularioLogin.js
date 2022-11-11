@@ -21,13 +21,14 @@ function FormularioLogin() {
     setUser({ ...user, [name]: value });
   };
 
+  // ===== Authentication =====
   const signIn = (e) => {
     e.preventDefault()
     signInWithEmailAndPassword(auth, user.email, user.password)
       .then((userCredential) => {
         const user = userCredential.user;
         setUserCredential(user)
-        console.log("user", user)
+        // console.log("user", user)
       })
       .then((user) => {
         if (user !== null) {
@@ -41,7 +42,6 @@ function FormularioLogin() {
       });
   }
 
-  // ===== Authentication =====
 
   return (
     <div className="w-[100%] h-[492px] justify-center items-center flex flex-col bg-gray-100 ">
