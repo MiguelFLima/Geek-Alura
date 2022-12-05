@@ -1,1 +1,5 @@
-Alura Challenge 5
+# Alura Challenge 5
+
+* Next.js
+* Firebase
+* TailwindCSS
